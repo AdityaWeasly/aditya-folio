@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -20,10 +19,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_eg2b2y6';
+      const templateId = 'template_h7mn80k';
+      const publicKey = 'tB3C7HXWRcJDrmkTC';
 
       const templateParams = {
         from_name: formData.name,
