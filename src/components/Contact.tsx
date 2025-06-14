@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -64,9 +65,16 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/e1c9906f-3f01-4445-b2da-790c0311582d.png';
+    link.download = 'Kolluri_Aditya_Resume.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
     toast({
-      title: "Resume Download",
-      description: "Resume download will be available soon!"
+      title: "Resume Downloaded!",
+      description: "Resume has been downloaded successfully."
     });
   };
 
