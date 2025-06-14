@@ -6,6 +6,17 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl">
+              <img
+                src="/lovable-uploads/d56d9f2e-d3ef-4fcc-842f-601705afe09a.png"
+                alt="Kolluri Aditya"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
             Kolluri <span className="text-blue-600">Aditya</span>
           </h1>
