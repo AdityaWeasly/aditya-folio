@@ -31,32 +31,32 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-white/30">
+    <section id="skills" className="py-20 px-4 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Technical Skills</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto shadow-lg shadow-cyan-400/50"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-800/60 backdrop-blur-sm rounded-xl p-6 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-shadow duration-300 border border-purple-400/20"
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-6 text-center">
+              <h3 className="text-xl font-semibold text-white mb-6 text-center">
                 {category.title}
               </h3>
               <div className="space-y-4">
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-blue-600 font-medium">{skill.level}%</span>
+                      <span className="text-gray-300 font-medium">{skill.name}</span>
+                      <span className="text-cyan-400 font-medium">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out shadow-lg shadow-cyan-500/50"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

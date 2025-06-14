@@ -25,11 +25,11 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+      scrolled ? "bg-gray-900/90 backdrop-blur-md shadow-lg shadow-cyan-500/20 border-b border-cyan-400/20" : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-gray-800">
+          <div className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
             Kolluri Aditya
           </div>
           
@@ -39,7 +39,7 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium hover:glow"
               >
                 {item.name}
               </a>
@@ -48,7 +48,7 @@ const Navigation = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-cyan-400"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -57,12 +57,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 py-4 shadow-lg">
+          <div className="md:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 py-4 shadow-lg border border-cyan-400/20">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200"
+                className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

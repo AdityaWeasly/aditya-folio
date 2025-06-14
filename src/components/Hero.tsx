@@ -3,12 +3,12 @@ import { ArrowDown, Mail, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-8 flex justify-center">
-            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-600 shadow-2xl">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-2xl shadow-cyan-400/50 hover:shadow-cyan-400/80 transition-all duration-300">
               <img
                 src="/lovable-uploads/d56d9f2e-d3ef-4fcc-842f-601705afe09a.png"
                 alt="Kolluri Aditya"
@@ -17,24 +17,24 @@ const Hero = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
-            Kolluri <span className="text-blue-600">Aditya</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Kolluri <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Aditya</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-4">
+          <p className="text-xl md:text-2xl text-gray-300 mb-4">
             Computer Science Engineering Student
           </p>
-          <p className="text-lg md:text-xl text-blue-600 mb-8 font-medium">
+          <p className="text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400 mb-8 font-medium">
             Aspiring AI/ML Developer
           </p>
         </div>
         
         <div className="animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <div className="flex items-center gap-2 text-gray-600">
-            <Mail size={18} />
+          <div className="flex items-center gap-2 text-gray-300">
+            <Mail size={18} className="text-cyan-400" />
             <span>adityaweasly169@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2 text-gray-600">
-            <Phone size={18} />
+          <div className="flex items-center gap-2 text-gray-300">
+            <Phone size={18} className="text-purple-400" />
             <span>8247743556</span>
           </div>
         </div>
@@ -42,20 +42,20 @@ const Hero = () => {
         <div className="animate-fade-in flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#about"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+            className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 font-medium shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50"
           >
             Learn More About Me
           </a>
           <a
             href="#contact"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 font-medium"
+            className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-200 font-medium shadow-lg shadow-cyan-400/25 hover:shadow-cyan-400/50"
           >
             Get In Touch
           </a>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-gray-400" size={24} />
+          <ArrowDown className="text-cyan-400" size={24} />
         </div>
       </div>
     </section>
