@@ -4,7 +4,7 @@ const Projects = () => {
     title: "Enhancing Grayscale Image Colorization Using Hybrid Vision Transformer & DNN",
     description: "A cutting-edge deep learning model that transforms grayscale images into vibrant colored versions using the power of Vision Transformers combined with Deep Neural Networks. This project demonstrates advanced AI techniques in computer vision.",
     technologies: ["Python", "OpenCV", "PyTorch", "Transformers", "Computer Vision"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
+    image: "/lovable-uploads/34dbe501-015a-4f24-b396-60a7e7cf9743.png",
     category: "AI/ML"
   }, {
     title: "Blog Website",
