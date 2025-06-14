@@ -1,7 +1,5 @@
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4">
+  return <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
@@ -10,13 +8,13 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg leading-relaxed text-zinc-400">
               I'm a passionate Computer Science Engineering student at Bharath Institute of Higher Education and Research, 
               graduating in 2025 with a CGPA of 8.3. My journey in technology is driven by an insatiable curiosity 
               about artificial intelligence and machine learning.
             </p>
             
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg leading-relaxed text-zinc-400">
               I love solving real-world problems using a creative blend of technology and innovation. 
               Whether it's building intelligent systems, developing web applications, or exploring computer vision, 
               I approach each project with enthusiasm and dedication.
@@ -57,20 +55,13 @@ const About = () => {
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-8">Hobbies & Interests</h3>
             <div className="flex flex-wrap gap-2">
-              {["Chess", "Badminton", "Video Games"].map((hobby) => (
-                <span
-                  key={hobby}
-                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                >
+              {["Chess", "Badminton", "Video Games"].map(hobby => <span key={hobby} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
                   {hobby}
-                </span>
-              ))}
+                </span>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
