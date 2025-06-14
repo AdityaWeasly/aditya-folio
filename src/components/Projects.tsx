@@ -1,54 +1,38 @@
-
 import { ExternalLink, Github } from "lucide-react";
-
 const Projects = () => {
-  const projects = [
-    {
-      title: "Enhancing Grayscale Image Colorization Using Hybrid Vision Transformer & DNN",
-      description: "A cutting-edge deep learning model that transforms grayscale images into vibrant colored versions using the power of Vision Transformers combined with Deep Neural Networks. This project demonstrates advanced AI techniques in computer vision.",
-      technologies: ["Python", "OpenCV", "PyTorch", "Transformers", "Computer Vision"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
-      category: "AI/ML"
-    },
-    {
-      title: "Blog Website",
-      description: "A fully responsive and modern blog website designed for seamless content publishing and enhanced user engagement. Features clean design, responsive layout, and intuitive user interface for both readers and content creators.",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop",
-      category: "Web Development"
-    },
-    {
-      title: "CNN-Based Drowsiness Detection System",
-      description: "A real-time safety system that uses Convolutional Neural Networks and Haar Cascades to detect driver drowsiness. This system provides immediate alerts for safety-critical applications, potentially preventing accidents.",
-      technologies: ["Python", "OpenCV", "CNN", "Haar Cascades", "Real-time Processing"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
-      category: "AI/ML"
-    },
-  ];
-
-  return (
-    <section id="projects" className="py-20 px-4">
+  const projects = [{
+    title: "Enhancing Grayscale Image Colorization Using Hybrid Vision Transformer & DNN",
+    description: "A cutting-edge deep learning model that transforms grayscale images into vibrant colored versions using the power of Vision Transformers combined with Deep Neural Networks. This project demonstrates advanced AI techniques in computer vision.",
+    technologies: ["Python", "OpenCV", "PyTorch", "Transformers", "Computer Vision"],
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
+    category: "AI/ML"
+  }, {
+    title: "Blog Website",
+    description: "A fully responsive and modern blog website designed for seamless content publishing and enhanced user engagement. Features clean design, responsive layout, and intuitive user interface for both readers and content creators.",
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop",
+    category: "Web Development"
+  }, {
+    title: "CNN-Based Drowsiness Detection System",
+    description: "A real-time safety system that uses Convolutional Neural Networks and Haar Cascades to detect driver drowsiness. This system provides immediate alerts for safety-critical applications, potentially preventing accidents.",
+    technologies: ["Python", "OpenCV", "CNN", "Haar Cascades", "Real-time Processing"],
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+    category: "AI/ML"
+  }];
+  return <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="mt-4 max-w-2xl mx-auto text-zinc-400">
             Here are some of my notable projects that showcase my skills in AI/ML, web development, and problem-solving.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105"
-            >
+          {projects.map((project, index) => <div key={index} className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
-                />
+                <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110" />
                 <div className="absolute top-4 right-4">
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
@@ -65,19 +49,12 @@ const Projects = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium"
-                    >
+                  {project.technologies.slice(0, 3).map(tech => <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
                       {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="text-gray-500 text-xs font-medium">
+                    </span>)}
+                  {project.technologies.length > 3 && <span className="text-gray-500 text-xs font-medium">
                       +{project.technologies.length - 3} more
-                    </span>
-                  )}
+                    </span>}
                 </div>
 
                 <div className="flex gap-3 pt-4 border-t border-gray-200">
@@ -91,12 +68,9 @@ const Projects = () => {
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Projects;
