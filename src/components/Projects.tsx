@@ -16,7 +16,7 @@ const Projects = () => {
     title: "CNN-Based Drowsiness Detection System",
     description: "A real-time safety system that uses Convolutional Neural Networks and Haar Cascades to detect driver drowsiness. This system provides immediate alerts for safety-critical applications, potentially preventing accidents.",
     technologies: ["Python", "OpenCV", "CNN", "Haar Cascades", "Real-time Processing"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+    image: "/lovable-uploads/84d62fb9-0b21-4eb3-907b-c4bd2cae19ae.png",
     category: "AI/ML"
   }];
   return <section id="projects" className="min-h-screen py-20 px-4 flex items-center">
