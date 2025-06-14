@@ -4,28 +4,32 @@ import { Mail, Phone } from "lucide-react";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto">
         <div className="animate-fade-in">
-          {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-2xl shadow-cyan-400/50 hover:shadow-cyan-400/80 transition-all duration-300">
+          {/* Profile Image and Name Side by Side */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-8">
+            {/* Profile Image - Larger */}
+            <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-cyan-400 shadow-2xl shadow-cyan-400/50 hover:shadow-cyan-400/80 transition-all duration-300 flex-shrink-0">
               <img
                 src="/lovable-uploads/d56d9f2e-d3ef-4fcc-842f-601705afe09a.png"
                 alt="Kolluri Aditya"
                 className="w-full h-full object-cover"
               />
             </div>
+            
+            {/* Name and Title */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+                Kolluri <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Aditya</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-4">
+                Computer Science Engineering Student
+              </p>
+              <p className="text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400 mb-8 font-medium">
+                Aspiring AI/ML Developer
+              </p>
+            </div>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Kolluri <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Aditya</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Computer Science Engineering Student
-          </p>
-          <p className="text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-cyan-400 mb-8 font-medium">
-            Aspiring AI/ML Developer
-          </p>
         </div>
         
         <div className="animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
