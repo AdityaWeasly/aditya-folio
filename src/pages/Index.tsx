@@ -9,14 +9,28 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 scroll-smooth">
       <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
+      <div className="snap-y snap-mandatory">
+        <div className="snap-start">
+          <Hero />
+        </div>
+        <div className="snap-start">
+          <About />
+        </div>
+        <div className="snap-start">
+          <Skills />
+        </div>
+        <div className="snap-start">
+          <Projects />
+        </div>
+        <div className="snap-start">
+          <Education />
+        </div>
+        <div className="snap-start">
+          <Contact />
+        </div>
+      </div>
     </div>
   );
 };

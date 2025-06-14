@@ -1,6 +1,7 @@
+
 const About = () => {
-  return <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+  return <section id="about" className="min-h-screen py-20 px-4 flex items-center">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-zinc-100">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>

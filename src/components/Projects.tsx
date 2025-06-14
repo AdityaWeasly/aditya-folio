@@ -19,8 +19,8 @@ const Projects = () => {
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
     category: "AI/ML"
   }];
-  return <section id="projects" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+  return <section id="projects" className="min-h-screen py-20 px-4 flex items-center">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-zinc-100">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
