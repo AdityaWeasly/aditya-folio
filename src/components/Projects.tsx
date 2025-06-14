@@ -22,7 +22,7 @@ const Projects = () => {
   return <section id="projects" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-zinc-100">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           <p className="mt-4 max-w-2xl mx-auto text-zinc-400">
             Here are some of my notable projects that showcase my skills in AI/ML, web development, and problem-solving.
