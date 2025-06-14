@@ -1,5 +1,5 @@
 
-import { ArrowDown, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -52,10 +52,6 @@ const Hero = () => {
           >
             Get In Touch
           </a>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-cyan-400" size={24} />
         </div>
       </div>
     </section>
