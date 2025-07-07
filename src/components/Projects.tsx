@@ -1,4 +1,6 @@
+
 import { ExternalLink, Github } from "lucide-react";
+
 const Projects = () => {
   const projects = [{
     title: "Enhancing Grayscale Image Colorization Using Hybrid Vision Transformer & DNN",
@@ -17,8 +19,14 @@ const Projects = () => {
     description: "A real-time safety system that uses Convolutional Neural Networks and Haar Cascades to detect driver drowsiness. This system provides immediate alerts for safety-critical applications, potentially preventing accidents.",
     technologies: ["Python", "OpenCV", "CNN", "Haar Cascades", "Real-time Processing"],
     image: "/lovable-uploads/84d62fb9-0b21-4eb3-907b-c4bd2cae19ae.png",
-    category: "AI/ML"
+    category: "AI/ML",
+    githubUrl: "https://github.com/AdityaWeasly/mini_porject.git"
   }];
+
+  const handleGithubClick = (githubUrl: string) => {
+    window.open(githubUrl, '_blank');
+  };
+
   return <section id="projects" className="min-h-screen py-20 px-4 flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
@@ -62,7 +70,15 @@ const Projects = () => {
                     <ExternalLink size={16} />
                     View Details
                   </button>
-                  <button className="flex items-center gap-2 text-gray-600 hover:text-gray-700 font-medium text-sm transition-colors">
+                  <button 
+                    className={`flex items-center gap-2 font-medium text-sm transition-colors ${
+                      project.githubUrl 
+                        ? 'text-gray-600 hover:text-gray-700 cursor-pointer' 
+                        : 'text-gray-400 cursor-not-allowed'
+                    }`}
+                    onClick={() => project.githubUrl && handleGithubClick(project.githubUrl)}
+                    disabled={!project.githubUrl}
+                  >
                     <Github size={16} />
                     Source Code
                   </button>
@@ -73,4 +89,5 @@ const Projects = () => {
       </div>
     </section>;
 };
+
 export default Projects;
