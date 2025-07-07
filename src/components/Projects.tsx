@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
@@ -23,11 +22,19 @@ const Projects = () => {
     githubUrl: "https://github.com/AdityaWeasly/mini_porject.git"
   }];
 
-  const handleGithubClick = (githubUrl: string) => {
+  const handleGithubClick = (githubUrl: string, e: React.MouseEvent) => {
+    e.stopPropagation();
     window.open(githubUrl, '_blank');
   };
 
-  return <section id="projects" className="min-h-screen py-20 px-4 flex items-center">
+  const handleCardClick = (project: typeof projects[0]) => {
+    console.log('Card clicked:', project.title);
+    // You can add modal functionality or navigation here
+    alert(`Viewing details for: ${project.title}`);
+  };
+
+  return (
+    <section id="projects" className="min-h-screen py-20 px-4 flex items-center">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-zinc-100">Featured Projects</h2>
@@ -38,7 +45,12 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => <div key={index} className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+          {projects.map((project, index) => (
+            <div 
+              key={index} 
+              className="bg-white/60 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
+              onClick={() => handleCardClick(project)}
+            >
               <div className="relative overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110" />
                 <div className="absolute top-4 right-4">
@@ -57,16 +69,23 @@ const Projects = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map(tech => <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                  {project.technologies.slice(0, 3).map(tech => (
+                    <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
                       {tech}
-                    </span>)}
-                  {project.technologies.length > 3 && <span className="text-gray-500 text-xs font-medium">
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="text-gray-500 text-xs font-medium">
                       +{project.technologies.length - 3} more
-                    </span>}
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex gap-3 pt-4 border-t border-gray-200">
-                  <button className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
+                  <button 
+                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <ExternalLink size={16} />
                     View Details
                   </button>
@@ -76,7 +95,7 @@ const Projects = () => {
                         ? 'text-gray-600 hover:text-gray-700 cursor-pointer' 
                         : 'text-gray-400 cursor-not-allowed'
                     }`}
-                    onClick={() => project.githubUrl && handleGithubClick(project.githubUrl)}
+                    onClick={(e) => project.githubUrl && handleGithubClick(project.githubUrl, e)}
                     disabled={!project.githubUrl}
                   >
                     <Github size={16} />
@@ -84,10 +103,12 @@ const Projects = () => {
                   </button>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Projects;
