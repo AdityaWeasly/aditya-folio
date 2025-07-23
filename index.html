@@ -25,31 +25,17 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script type="text/javascript">
-      (function() {
-        function loadUnicornStudio() {
-          if(!window.UnicornStudio){
-            window.UnicornStudio = [];
-          }
-          window.UnicornStudio.push({ project: "fScayMr8Ekpd9bSLyxgl" });
-
-          var script = document.createElement("script");
-          script.src = "https://cdn.unicorn.studio/embed.js";
-          script.async = true;
-          script.onload = function() {
-            console.log('Unicorn Studio script loaded');
-          };
-          script.onerror = function() {
-            console.error('Failed to load Unicorn Studio script');
-          };
-          document.head.appendChild(script);
+      !function(){
+        if(!window.UnicornStudio){
+          window.UnicornStudio = [];
         }
+        window.UnicornStudio.push({ project: "fScayMr8Ekpd9bSLyxgl" });
 
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', loadUnicornStudio);
-        } else {
-          loadUnicornStudio();
-        }
-      })();
+        var script = document.createElement("script");
+        script.src = "https://cdn.unicorn.studio/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }();
     </script>
   </body>
 </html>

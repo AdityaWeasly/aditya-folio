@@ -9,23 +9,15 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative scroll-smooth">
-      {/* Unicorn Studio Background Animation */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 scroll-smooth">
+      {/* Unicorn Studio Animation */}
       <div 
         data-us-project="fScayMr8Ekpd9bSLyxgl" 
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          zIndex: 0,
-          pointerEvents: 'none'
-        }}
+        style={{width: '100%', height: '600px'}}
+        className="absolute top-0 left-0 z-0"
       ></div>
       
-      {/* Content Overlay */}
-      <div className="relative z-10 bg-black/20">
+      <div className="relative z-10">
         <Navigation />
       <div className="snap-y snap-mandatory">
         <div className="snap-start">
