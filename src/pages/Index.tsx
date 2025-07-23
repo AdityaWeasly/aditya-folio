@@ -9,8 +9,17 @@ import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 scroll-smooth">
-      <Navigation />
+    <div className="min-h-screen relative scroll-smooth">
+      {/* Unicorn Studio Background Animation */}
+      <div 
+        data-us-project="fScayMr8Ekpd9bSLyxgl" 
+        className="fixed inset-0 w-full h-full z-0"
+        style={{width: '100vw', height: '100vh'}}
+      ></div>
+      
+      {/* Content Overlay */}
+      <div className="relative z-10">
+        <Navigation />
       <div className="snap-y snap-mandatory">
         <div className="snap-start">
           <Hero />
@@ -30,6 +39,7 @@ const Index = () => {
         <div className="snap-start">
           <Contact />
         </div>
+      </div>
       </div>
     </div>
   );
