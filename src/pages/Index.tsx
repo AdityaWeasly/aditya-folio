@@ -13,12 +13,19 @@ const Index = () => {
       {/* Unicorn Studio Background Animation */}
       <div 
         data-us-project="fScayMr8Ekpd9bSLyxgl" 
-        className="fixed inset-0 w-full h-full z-0"
-        style={{width: '100vw', height: '100vh'}}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 0,
+          pointerEvents: 'none'
+        }}
       ></div>
       
       {/* Content Overlay */}
-      <div className="relative z-10">
+      <div className="relative z-10 bg-black/20">
         <Navigation />
       <div className="snap-y snap-mandatory">
         <div className="snap-start">
