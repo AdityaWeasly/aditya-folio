@@ -10,18 +10,7 @@ import Navigation from "@/components/Navigation";
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 scroll-smooth">
-      {/* Unicorn Studio Animation */}
-      <iframe 
-        src="https://embed.unicorn.studio/fScayMr8Ekpd9bSLyxgl" 
-        width="100%" 
-        height="600" 
-        frameBorder="0" 
-        allowFullScreen
-        className="absolute top-0 left-0 z-0"
-      ></iframe>
-      
-      <div className="relative z-10">
-        <Navigation />
+      <Navigation />
       <div className="snap-y snap-mandatory">
         <div className="snap-start">
           <Hero />
@@ -41,7 +30,6 @@ const Index = () => {
         <div className="snap-start">
           <Contact />
         </div>
-      </div>
       </div>
     </div>
   );
